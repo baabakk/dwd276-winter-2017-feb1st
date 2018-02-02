@@ -7,9 +7,13 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class SubCategoryComponent implements OnInit {
 @Input() info;
+condition = true;
   constructor() { }
 
   ngOnInit() {
+  }
+  changeCondition(){
+    this.condition = !this.condition;
   }
 
 }

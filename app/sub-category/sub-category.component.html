@@ -1,4 +1,4 @@
-<div class="bordered">
+<div class="bordered" *ngIf="condition; else elseDiv">
   Band: {{info.band}}
 </div>
 <div class="bordered">
@@ -7,3 +7,9 @@
 <div class="bordered">
   Book:  {{info.movie}}
 </div>
+<div>
+  <button (click)="changeCondition()">No band</button>
+</div>
+<ng-template #elseDiv>
+  <div style="background:darkred;color:white">You turned off the band thingy!</div>
+</ng-template>
